@@ -10,8 +10,8 @@
 
 | Tipo | Descripción |
 | ------------- | ------------- |
-| PDF | [Requerimientos de Calculadora IMC](https://drive.google.com/file/d/1NBrofhAjFsLhJ5hu4y4_LNdmOPMHmCxE/view?usp=sharing "Requerimientos Calculadora PDF")  |
-| LaTex | [Requerimientos de Calculadora IMC](https://drive.google.com/file/d/1NXLDZvqasovHlejTbRMz-sBeZd-FMmFw/view?usp=sharing "Requerimientos Calculadora LaTex") |
+| PDF | [Requerimientos de Calculadora IMC](https://drive.google.com/file/d/1V1aoKapeYZLYPRwBKuqttu2BGvaMbz2T/view?usp=sharing "Requerimientos Calculadora PDF")  |
+| LaTex | [Requerimientos de Calculadora IMC](https://texviewer.herokuapp.com/?state=%7B%22ids%22:%5B%221-fZ0vvgXWtkrJjB36Adacboe7TzRY-lq%22%5D,%22action%22:%22open%22,%22userId%22:%22115855175723375704803%22,%22resourceKeys%22:%7B%7D%7D "Requerimientos Calculadora LaTex") |
 
 ## Elaborado por
 
