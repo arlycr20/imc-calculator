@@ -1,27 +1,19 @@
-# ImcCalculator
+# IMC CALCULATOR
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+## Firebase
+[Calculadora IMC](https://imc-calculadora-ded1a.web.app/ "Firebase IMC")
 
-## Development server
+## Servidor
+[Calculadora IMC](http://104.198.244.0:5028/ "Servidor IMC")
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Documentación
 
-## Code scaffolding
+| Tipo | Descripción |
+| ------------- | ------------- |
+| PDF | [Requerimientos de Calculadora IMC](https://drive.google.com/file/d/1NBrofhAjFsLhJ5hu4y4_LNdmOPMHmCxE/view?usp=sharing "Requerimientos Calculadora PDF")  |
+| LaTex | [Requerimientos de Calculadora IMC](https://drive.google.com/file/d/1NXLDZvqasovHlejTbRMz-sBeZd-FMmFw/view?usp=sharing "Requerimientos Calculadora LaTex") |
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Elaborado por
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Arely Colorado Rodríguez
+- Gustavo Romero Oltehua

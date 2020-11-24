@@ -1,0 +1,252 @@
+<body id="hero" style="background-image: url(../../../assets/img/fondo.jpg)">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="card col-md-8 titulo">
+                <div class="card-body">
+                    <p id="p1">Calculadora de Indice de Masa Corporal</p>
+                    <p id="p2"> ¿Qué es y por qué es importante? <br>
+                        Es un número que se calcula con base en el peso y la estatura de la persona.
+                        Para la mayoría de las personas, el IMC es un indicador confiable de la gordura y
+                        se usa para identificar las categorías de peso que pueden llevar a problemas de salud.</p>
+                </div>
+            </div>
+
+            <div class="card col-md-4 calculadora align-middle">
+                <div class="card-body">
+                    <form class="text-center">
+
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <span><i class="fas fa-female"></i></span>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="genero" [(ngModel)]="genero"
+                                            id="femenino" value="1" checked>
+                                        <label class="form-check-label" for="gridRadios1">Femenino</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <span><i class="fas fa-male"></i></span>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="genero" [(ngModel)]="genero"
+                                            id="masculino" value="0">
+                                        <label class="form-check-label" for="gridRadios2">Masculino</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group mb-2">
+                            <label class="form-check-label" for="edad">Edad</label>
+                            <input type="number" class="form-control" name="edad" [(ngModel)]="edad" aria-label="edad"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label class="form-check-label" for="peso">Peso</label>
+                            <input type="number" class="form-control" name="peso" [(ngModel)]="peso"
+                                placeholder="Peso (kg)" aria-label="peso" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label class="form-check-label" for="altura">Altura</label>
+                            <input type="number" class="form-control" name="altura" [(ngModel)]="altura"
+                                placeholder="Estatura (cm)" aria-label="estatura" aria-describedby="basic-addon1">
+                        </div>
+
+                        <input type="submit" class="btn btn-lg btn-block calculate-btn" value="CALCULAR"
+                            (click)="calcular()">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="card ticket">
+            <div *ngIf="imc > 0" class="card-body">
+                <h2 class="text-center">Calculos Antropometricos</h2>
+                <hr>
+                <table class="table table-active text-center" id="datos">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sexo</th>
+                            <th scope="col">Edad</th>
+                            <th scope="col">Peso</th>
+                            <th scope="col">Estatura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sexo">{{sexo}}</td>
+                            <td class="edad">{{edad}}</td>
+                            <td class="peso">{{peso}} kg</td>
+                            <td class="altura">{{altura}} cm</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="row">
+                    <div class="col-md-6" id="imc">
+                        <div class="text-center">
+                            <h3>Tu Índice de Masa Corporal es:</h3>
+                            <hr>
+                            <p id="p1" class="rango">{{rango}}</p>
+                            <p id="p2" class="result"> {{imc.toFixed(1)}} kg/m<sup>2</sup></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div *ngIf="tipoEdad == 'adulto'">
+                            <table class="table table-dark table-striped text-center">
+                                <thead>
+                                    <tr class="bg-secondary">
+                                        <th scope="col">IMC</th>
+                                        <th scope="col">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Por debajo de 18.5</td>
+                                        <td>Bajo Peso</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18.5 – 24.9</td>
+                                        <td>Peso Normal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25.0 – 29.9</td>
+                                        <td>Sobrepeso</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30.0 – 34.9</td>
+                                        <td>Obesidad clase I</td>
+                                    </tr>
+                                    <tr>
+                                        <td>35.0 – 39.9</td>
+                                        <td>Obesidad clase II</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Por encima de 40</td>
+                                        <td>Obesidad clase III</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div *ngIf="tipoEdad == 'niño' && sexo == 'femenino'">
+                            <table class="table table-dark table-striped text-center">
+                                <thead>
+                                    <tr class="bg-warning">
+                                        <th scope="col">IMC</th>
+                                        <th scope="col">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> -12.7 - 13.3</td>
+                                        <td>Bajo Peso</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13.4 - 16.3</td>
+                                        <td>Peso Normal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16.4 - 18.7</td>
+                                        <td>Sobrepeso</td>
+                                    </tr>
+                                    <tr>
+                                        <td>+ 18.8</td>
+                                        <td>Obesidad</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div *ngIf="tipoEdad == 'niño' && sexo == 'masculino'">
+                            <table class="table table-dark table-striped text-center">
+                                <thead>
+                                    <tr class="bg-success">
+                                        <th scope="col">IMC</th>
+                                        <th scope="col">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> -13.0 - 13.6</td>
+                                        <td>Bajo Peso</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13.7 - 16.2</td>
+                                        <td>Peso Normal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16.3 - 18.2</td>
+                                        <td>Sobrepeso</td>
+                                    </tr>
+                                    <tr>
+                                        <td>+ 18.2</td>
+                                        <td>Obesidad</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div *ngIf="tipoEdad == 'adolescente' && sexo == 'femenino'">
+                            <table class="table table-dark table-striped text-center">
+                                <thead>
+                                    <tr class="bg-danger">
+                                        <th scope="col">IMC</th>
+                                        <th scope="col">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>- 13.5 - 16.5</td>
+                                        <td>Bajo Peso</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16.6 - 20.7</td>
+                                        <td>Peso Normal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20.8 - 23.6</td>
+                                        <td>Sobrepeso</td>
+                                    </tr>
+                                    <tr>
+                                        <td>+ 23.7</td>
+                                        <td>Obesidad</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div *ngIf="tipoEdad == 'adolescente' && sexo == 'masculino'">
+                            <table class="table table-dark table-striped text-center">
+                                <thead>
+                                    <tr class="bg-primary">
+                                        <th scope="col">IMC</th>
+                                        <th scope="col">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>-13.7 - 16.4 </td>
+                                        <td>Bajo Peso</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16.5 - 18.5</td>
+                                        <td>Peso Normal</td>
+                                    </tr>
+                                    <tr>
+                                        <td> 18.5 - 21.4</td>
+                                        <td>Sobrepeso</td>
+                                    </tr>
+                                    <tr>
+                                        <td> + 21.4 </td>
+                                        <td>Obesidad</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
