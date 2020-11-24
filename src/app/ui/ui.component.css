@@ -1,0 +1,102 @@
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-image: url(./assets/img/fondo.jpg);*/ 
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+
+#hero::after{
+    content: '';
+    position:absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.titulo {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    background: transparent;
+}
+.titulo #p1 {
+    color: #D3D3D3;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 65px;
+    font-weight: bolder;
+}
+.titulo #p2 {
+    color: #D3D3D3;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.calculadora {
+    background-color: rgba(255, 255, 255, 0.857);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control{
+    border-radius: 50px;
+}
+.form-control::placeholder{ 
+    color: #6e6e6e;
+    font-style: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; 
+    font-size: 16px;
+    border: transparent;
+}
+
+.btn{
+    background-color: #000000;
+    border-radius: 100px;
+    color:#e1dddd;
+    border: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: .2rem;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.ticket{
+    margin-top: 10px;
+    margin-bottom:40px;
+    background-color: rgba(255, 255, 255, 0.857);
+}
+.ticket #datos {
+    font-size: 20px;
+}
+.ticket #imc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.ticket h2{
+    font-weight: bold;
+}
+.ticket #p1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+.ticket #p2 {
+    font-size: 70px;
+    font-weight: bold;
+}
