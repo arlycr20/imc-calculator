@@ -10,9 +10,10 @@ export function rango(edad, imc, genero) {
                 res='peso normal';
             }else if(imc >= 16.4 && imc <= 18.7){
                 res='sobrepeso';
-            }else if (imc > 18.8) {
+            }else {
                 res='obesidad';
             }
+
         }else{
             if (imc >= 13.0 && imc <= 13.6) {
                 res='peso bajo';
@@ -20,7 +21,7 @@ export function rango(edad, imc, genero) {
                 res='peso normal';
             }else if(imc >= 16.3 && imc <= 18.2){
                 res='sobrepeso';
-            }else if (imc > 18.2) {
+            }else {
                 res='obesidad';
             }
         }
@@ -36,7 +37,7 @@ export function rango(edad, imc, genero) {
                 res='peso normal';
             }else if(imc >= 20.8 && imc <= 23.6){
                 res='sobrepeso';
-            }else if (imc > 23.7) {
+            }else {
                 res='obesidad';
             }
 
@@ -48,7 +49,7 @@ export function rango(edad, imc, genero) {
                 res='peso normal';
             }else if(imc >= 18.5 && imc <= 21.4){
                 res='sobrepeso';
-            }else if (imc > 21.4) {
+            }else {
                 res='obesidad';
             }
 
@@ -66,7 +67,7 @@ export function rango(edad, imc, genero) {
             res='obesidad 1';
         }else if (imc >= 35.0 && imc <= 39.9) {
             res='obesidad 2';
-        }else if (imc >= 40.0) {
+        }else {
             res='obesidad 3';
         }
 
