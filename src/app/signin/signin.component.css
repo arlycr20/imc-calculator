@@ -28,7 +28,6 @@
     border: none;
     border-radius: 20px;
     width: 35%;
-    height: 20%;
 }
 
 .titulo {
@@ -94,7 +93,6 @@ a{
     letter-spacing: .2rem;
     margin-top: 50px;
     margin-bottom: 50px;
-    resize: both;
 }
 .btn:hover{
     background-color: #081f49;

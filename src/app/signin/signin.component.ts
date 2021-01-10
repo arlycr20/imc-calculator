@@ -21,8 +21,6 @@ export class SigninComponent implements OnInit {
 
   }
 
-  
-
   onSubmit(form: NgForm){
     if (form.invalid) {
       return;
