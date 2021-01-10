@@ -1,0 +1,27 @@
+<div class="portada" id="hero">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="titulo text-center">INICIO DE SESIÓN</h2>
+            <form class="text-center" (ngSubmit)="login(for)" #for="ngForm">
+                <div class="md-form">
+                    <span *ngIf="for.submitted && for.controls['email'].errors" class="text-danger animated fadeIn">El correo es obligatorio</span>
+                    <input type="email" id="email" name="email" class="form-control text-center" required placeholder="Correo Eléctronico" [(ngModel)]="usuario.email">
+                </div>
+                <div class="md-form">
+                    <span *ngIf="for.submitted && for.controls['password'].errors" class="text-danger animated fadeIn">La contraseña es obligatorio</span>
+                    <input type="password"
+                    required id="password" name="password" class="form-control text-center" placeholder="Contraseña" [(ngModel)]="usuario.password">
+                </div>
+
+                <input type="submit" class="btn btn-info" value="INICIAR SESIÓN">
+                
+                <div>
+                    <p>¿Aún no tienes cuenta? <a routerLink="/signin">Registrate</a></p>
+                </div>
+                <div>
+                    <p>&copy; 2020 ACRORG</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
