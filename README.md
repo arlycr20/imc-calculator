@@ -1,8 +1,10 @@
 # IMC CALCULATOR
 
-## Firebase
-[Calculadora IMC - Parcial I](https://imc-calculadora-ded1a.web.app/ "Firebase IMC")
-[Calculadora IMC - Parcial II y III](https://imc-calculator-acrorg.web.app "Firebase FINAL IMC")
+## FIREBASE FINAL
+[Calculadora IMC](https://imc-calculator-acrorg.web.app "Firebase FINAL IMC")
+
+## Firebase Primer Parcial
+[Calculadora IMC](https://imc-calculadora-ded1a.web.app/ "Firebase IMC")
 
 ## Servidor
 [Calculadora IMC](http://104.198.244.0:5028/ "Servidor IMC")
