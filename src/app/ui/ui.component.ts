@@ -3,7 +3,9 @@ import { edad } from '../edad/edad';
 import { genero } from '../genero/genero';
 import { imc } from '../imc/imc';
 import { rango } from '../rango/rango';
-
+import { ImcsModel } from '../models/imcs.model';
+import { AuthService } from '../service/auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,29 +13,56 @@ import { rango } from '../rango/rango';
   templateUrl: './ui.component.html',
   styleUrls: ['./ui.component.css']
 })
-export class UiComponent implements OnInit {
+export class UiComponent implements OnInit { 
+
+  imcs:ImcsModel = new ImcsModel();  
+
+  arrImcs = [];
 
   genero = 0;
   sexo = '';
-  altura = 0;
-  edad = 0;
-  peso = 0;
+  altura;
+  edad;
+  peso;
   rango ='';
   imc = 0;
   tipoEdad = '';
 
-  constructor() { }
+  myDate = new Date();
+    
+  constructor(private auth: AuthService, private router: Router) {
+    this.getImc();
+  }
 
   ngOnInit(): void {
   }
 
   calcular(){
+    this.insertar();
+    this.gen();
+    this.estado();
+    this.getImc();
+    this.limpiar();
+  }
+
+  insertar(){
     let resul = null;
     resul = imc(this.altura, this.peso);
     this.imc = resul;
-    this.gen();
-    this.estado();
-    
+    this.imcs.idUser = Number(localStorage.getItem('ident'));
+    this.imcs.resultado = String(this.imc.toFixed(1));
+    this.imcs.fecha = `${this.myDate.getDate()}/${this.myDate.getMonth()+1}/${this.myDate.getFullYear()} ${this.myDate.getHours()}:${this.myDate.getMinutes()}`;
+    this.auth.insertImc(this.imcs).subscribe( resp =>{
+      resp;
+    });
+  }
+
+  limpiar(){
+    this.genero = 0;
+    this.altura;
+    this.edad;
+    this.peso;
+
   }
 
   estado(){
@@ -47,6 +76,17 @@ export class UiComponent implements OnInit {
     let res = '';
     res = genero(this.genero);
     this.sexo = res;
+  }
+
+  getImc(){
+   this.auth.getImcs(localStorage.getItem('ident')).subscribe((imcRes: any)=>{
+      this.arrImcs = imcRes;
+   });
+  }
+
+  exit(){
+    this.auth.logout();
+    this.router.navigateByUrl('/login');
   }
 
 }
