@@ -1,0 +1,31 @@
+<div class="portada" id="hero">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="titulo text-center">REGISTRO</h2>
+            <form class="text-center" (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div class="md-form">
+                    <span *ngIf="f.submitted && f.controls['name'].errors" class="text-danger">El Nombre requiere minimo de 10 caracteres</span>
+                    <input type="text" id="name" class="form-control text-center" required placeholder="Nombre" name="name" [(ngModel)]="usuario.name">
+                </div>
+                <div class="md-form">
+                    <span *ngIf="f.submitted && f.controls['email'].errors" class="text-danger">El correo es Obligatorio</span>
+                    <input type="email" id="email" class="form-control text-center" required placeholder="Correo eléctronico" name="email" [(ngModel)]="usuario.email">
+                </div>
+                <div class="md-form">
+                    <span *ngIf="f.submitted && f.controls['password'].errors" class="text-danger">La Contraseña es Obligatoria</span>
+                        <input type="password" id="password" class="form-control text-center" placeholder="Contraseña" 
+                        required name="password" [(ngModel)]="usuario.password">
+                </div>
+
+                <input type="submit" class="btn btn-info" value="REGISTRARSE">
+                
+                <div>
+                    <p>¿Ya tienes cuenta? <a routerLink="/login">Inicia Sesión</a></p>
+                </div>
+                <div>
+                    <p>&copy; 2020 ACRORG</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

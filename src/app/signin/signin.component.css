@@ -1,0 +1,109 @@
+.portada {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #360033;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#hero::after{
+    content: '';
+    position:absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    z-index: -1;
+}
+
+.card {
+    background: #3494E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border: none;
+    border-radius: 20px;
+    width: 35%;
+    height: 20%;
+}
+
+.titulo {
+    color: #ffffff;
+    font-family: 'Candara';
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: .2rem;
+}
+a{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+.form-control::placeholder { 
+    color: #949494; 
+    font-style: oblique;
+    font-family: 'Candara'; 
+    font-size: 20px;
+}
+
+#name {
+    border-radius: 100px;
+    background-color: rgb(255, 255, 255);
+    color:#000000;
+    border: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#email {
+    border-radius: 100px;
+    background-color: rgb(255, 255, 255);
+    color:#000000;
+    border: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#password{
+    border-radius: 100px;
+    background-color: #ffffff;
+    color:#000000;
+    border: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.btn{
+    background-color: #1a3d6b;
+    border-radius: 100px;
+    color:#ffffff;
+    border: transparent;
+    font-family: 'Candara';
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: .2rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    resize: both;
+}
+.btn:hover{
+    background-color: #081f49;
+    color: #000000;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Candara';
+    color: #000000;
+}
+
