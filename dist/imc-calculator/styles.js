@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\arely\Desktop\imc-calculator\src\styles.css */"OmL/");
+module.exports = __webpack_require__(/*! C:\Users\Arely\OneDrive\Escritorio\hi\imc-calculator\src\styles.css */"OmL/");
 
 
 /***/ }),
