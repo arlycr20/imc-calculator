@@ -4,10 +4,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*background-image: url(./assets/img/fondo.jpg);*/ 
-    background-size: cover;
-    background-position: top center;
     position: relative;
+    background: #360033;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 #hero::after{
@@ -24,22 +25,25 @@ body {
     margin-top: 30px;
     margin-bottom: 40px;
     background: transparent;
+    border: none;
 }
 .titulo #p1 {
-    color: #D3D3D3;
+    color: #ffffff;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     font-size: 65px;
     font-weight: bolder;
 }
 .titulo #p2 {
-    color: #D3D3D3;
+    color: #ffffff;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     font-size: 30px;
     font-weight: bold;
 }
 
 .calculadora {
-    background-color: rgba(255, 255, 255, 0.857);
+    background: #3494E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin-top: 60px;
     margin-bottom: 60px;
     border-radius: 5px;
@@ -48,6 +52,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 
 .form-control{
