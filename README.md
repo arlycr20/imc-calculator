@@ -1,7 +1,7 @@
 # IMC CALCULATOR
 
 ## FIREBASE FINAL
-[Calculadora IMC](https://imc-calculator-acrorg.web.app "Firebase FINAL IMC")
+[Calculadora IMC](https://acr2007.web.app "Firebase FINAL IMC")
 
 ## Firebase Primer Parcial
 [Calculadora IMC](https://imc-calculadora-ded1a.web.app/ "Firebase IMC")
@@ -18,7 +18,7 @@
 
 > Para el documento en LaTex, seleccionar "Abrir con TeX, LaTex Viewer and Editor". Será redireccionado a otra página.
 
-## Coverage
+## Coverage Primer Parcial
 
 ### Terminal
 
@@ -27,6 +27,13 @@
 ### Reporte 
 
 ![Reporte](https://user-images.githubusercontent.com/62484066/100407335-c4e5fb00-302d-11eb-9e0d-dc1857bd6db3.png)
+
+
+## COVERAGE FINAL
+
+### Terminal
+
+![Terminal](https://user-images.githubusercontent.com/62484066/104251761-0a238800-5436-11eb-9ac9-b717239df2f4.jpeg)
 
 
 ## Elaborado por
